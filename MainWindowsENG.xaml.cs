@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Speech.Recognition;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,19 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TextToSpeech
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainWindowsENG.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindowsENG : Window
     {
-      public  speech speech;
-      public  jsonHandler Json;
-        public MainWindow()
+        public speech speech;
+        public jsonHandler Json;
+        public MainWindowsENG()
         {
             InitializeComponent();
             speech = new speech(cmdvoice);
@@ -34,12 +32,12 @@ namespace TextToSpeech
         {
             try
             {
-            Json.savetoJson(text.Text,tb1.Text);
-            MessageBox.Show($"Файл сохранён под именем {tb1.Text}");
+                Json.savetoJson(text.Text, tb1.Text);
+                MessageBox.Show($"The file has been saved as {tb1.Text}");
             }
-            catch 
+            catch
             {
-                MessageBox.Show($"возникла ошибка");
+                MessageBox.Show($"an Error has occurd");
             }
         }
 
@@ -53,9 +51,9 @@ namespace TextToSpeech
             }
             catch
             {
-                MessageBox.Show($"возникла ошибка");
+                MessageBox.Show($"an Error has occurd");
             }
-           
+
         }
 
         private void json_op(object sender, RoutedEventArgs e)
@@ -64,10 +62,11 @@ namespace TextToSpeech
             {
                 Json.openjson(text);
             }
-            catch 
+            catch
             {
                 MessageBox.Show($"возникла ошибка");
             }
         }
     }
 }
+

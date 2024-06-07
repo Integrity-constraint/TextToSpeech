@@ -1,10 +1,11 @@
-﻿<Window x:Class="TextToSpeech.MainWindow"
+﻿<Window x:Class="TextToSpeech.MainWindowsENG"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TextToSpeech"
-        mc:Ignorable="d" Height="450" Width="800" Title="Из текста в речь">
+        mc:Ignorable="d"
+        Title="MainWindowsENG" Height="450" Width="800">
     <Grid >
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -49,22 +50,22 @@
 
         </TextBox>
         <Button Click="voicer" Margin="5" Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="2">
-            озвучить
+            voice it
         </Button>
         <Button Click="json" Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="1" Margin="5">
-            json сохр
+            save as json
         </Button>
         <Button Click="json_op" Grid.Column="12" Grid.ColumnSpan="2" Grid.Row="1" Margin="5">
-            json откр
+            open json
         </Button>
         <ComboBox Name="cmdvoice" Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="3" Margin="5">
-             
+
         </ComboBox>
         <TextBlock Foreground="White" FontSize="20" VerticalAlignment="Center"  HorizontalAlignment="Center"  Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="3">
-            Выбор голоса
+          Voice selection
         </TextBlock>
-        <TextBox  Name="tb1"  Grid.Column="12" Grid.Row="2" Margin="5" Grid.ColumnSpan="2">
-            имя файла
+        <TextBox Name="tb1"  Grid.Column="12" Grid.Row="2" Margin="5" Grid.ColumnSpan="2">
+filename
         </TextBox>
     </Grid>
 </Window>
